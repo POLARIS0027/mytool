@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -20,19 +9,159 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 1vmin);
+  /* Adjust font size */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.task-form {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  font-size: 1em;
+  /* Adjust font size */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-input {
+  margin: 5px;
+  padding: 5px;
+  /* Adjust padding */
+  font-size: 1em;
+  /* Adjust font size */
+  flex: 1;
+}
+
+.task-button {
+  margin: 5px;
+  padding: 5px;
+  /* Adjust padding */
+  font-size: 1em;
+  /* Adjust font size */
+  cursor: pointer;
+}
+
+.folder {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  background-color: white;
+  border-radius: 5px;
+  max-height: 500px;
+  /* Adjust height as needed */
+  overflow-y: auto;
+  position: relative;
+  /* Add this line for absolute positioning of folder name */
+}
+
+.folder-name {
+  margin: 0;
+  /* Remove bottom margin */
+  font-size: 1em;
+  /* Adjust font size */
+  color: black;
+  position: absolute;
+  /* Add this line for positioning */
+  top: 10px;
+  /* Adjust as needed */
+  left: 10px;
+  /* Adjust as needed */
+}
+
+.folders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1em;
+  /* Adjust font size */
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  /* Add margin to make space for folder name */
+}
+
+.task-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0px 0;
+  padding: 4px;
+  background-color: #3a3a3a;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  /* Adjust width as needed */
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: 1em;
+  /* Adjust font size */
+}
+
+.task-card-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  /* Adjust font size */
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1em;
+  /* Adjust font size */
+}
+
+.task-cell {
+  padding: 5px;
+  border: 1px solid #ddd;
+  word-break: break-word;
+  /* Add this line to break long words */
+  font-size: 1em;
+  /* Adjust font size */
+}
+
+.task-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  font-size: 1em;
+  /* Adjust font size */
+}
+
+.task-row .task-input {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 1em;
+  /* Adjust font size */
+}
+
+.task-actions {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  /* Adjust font size */
+}
+
+/* report */
+.report-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 0.75em;
+  /* Adjust font size if needed */
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.report-button:hover {
+  background-color: #5a5a5a;
 }

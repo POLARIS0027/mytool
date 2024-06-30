@@ -1,0 +1,136 @@
+/* 메인 페이지와 같은 배경색 설정 */
+.Report {
+    text-align: center;
+    padding: 20px;
+    background-color: #282c34;
+    min-height: 100vh;
+}
+
+/* 섹션 제목 글자색 흰색으로 설정 */
+.task-list-table h2 {
+    color: #ffffff;
+    text-align: left;
+    margin-right: 70%;
+    /* 적절한 왼쪽 마진 추가 */
+}
+
+.Report-header {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(5px + 1vmin);
+    /* Adjust font size */
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    /* Add padding-top for spacing */
+}
+
+.report-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 0.75em;
+    /* Adjust font size if needed */
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.report-button:hover {
+    background-color: #5a5a5a;
+}
+
+.task-list-table {
+    display: flex;
+    flex-direction: column;
+    /* Add this line to set flex direction to column */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    background-color: #3a3a3a;
+    /* 테이블 배경색 */
+}
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    color: #ffffff;
+    /* 기본 텍스트 색상 흰색으로 설정 */
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 35%;
+    /* Goal 열 너비 */
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 5%;
+    /* Status 열 너비 */
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 52%;
+    /* Next Action 열 너비 */
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 8%;
+    /* Deadline 열 너비 */
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* 상태에 따른 배경색 및 텍스트 색상 변경 */
+.status-done {
+    background-color: #cee5d5;
+    color: #000;
+}
+
+.status-blocked {
+    background-color: #db706c;
+    color: #fff;
+}
+
+.status-waiting {
+    background-color: #f3aa51;
+    color: #000;
+}
+
+.status-todo {
+    background-color: #fcf695;
+    color: #000;
+}
+
+.status-wip {
+    background-color: #567ace;
+    color: #fff;
+}

@@ -125,7 +125,7 @@
   text-align: center;
   /* 가운데 정렬 */
   vertical-align: middle;
-  width: 33.33%;
+  text-align: left;
   /* 각 셀의 너비를 33.33%로 설정 */
 }
 

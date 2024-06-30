@@ -28,7 +28,7 @@ const getStatusStyle = (status) => {
   }
 };
 
-const EditableField = ({ text, type, onDoubleClick, onChange, onBlur }) => {
+const EditableField = ({ text, type, onDoubleClick, onChange, onBlur, style }) => {
   const [isEditing, setIsEditing] = useState(false);
 
   return (
@@ -40,9 +40,10 @@ const EditableField = ({ text, type, onDoubleClick, onChange, onBlur }) => {
           onChange={onChange}
           onBlur={onBlur}
           autoFocus
+          style={style} // 인라인 스타일을 input에도 적용
         />
       ) : (
-        <span>{text}</span>
+        <span style={style}>{text}</span> // 인라인 스타일을 span에도 적용
       )}
     </div>
   );
@@ -97,6 +98,7 @@ const Task = ({ task, onEdit, onDelete }) => {
                 <EditableField
                   text={task.goal}
                   type="text"
+                  style={{ fontWeight: 'bold' }}
                   onDoubleClick={() => { }}
                   onChange={(e) => handleFieldChange('goal', e.target.value)}
                   onBlur={() => onEdit(task)}
@@ -221,13 +223,13 @@ function App() {
     handleEditTask(updatedTask);
   };
 
-  const folders = ['INBOX', 'PC', 'backroom', 'KWMR', 'OJT', 'OKD', 'short'];
+  const folders = ['INBOX', '自分の席', '裏部屋', '岡田さん', '河村さん', 'OJT', 'ETC'];
 
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="App">
         <header className="App-header">
-          <Link to="/report" className="report-button">보고 화면으로 가기</Link>
+          <Link to="/report" className="report-button">報告画面</Link>
           <h1>Tasks</h1>
           <form onSubmit={handleAddTask} className="task-form">
             <input

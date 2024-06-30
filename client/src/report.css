@@ -84,6 +84,7 @@ td {
 th:nth-child(1),
 td:nth-child(1) {
     width: 35%;
+    text-align: left;
     /* Goal 열 너비 */
 }
 
@@ -96,6 +97,7 @@ td:nth-child(2) {
 th:nth-child(3),
 td:nth-child(3) {
     width: 52%;
+    text-align: left;
     /* Next Action 열 너비 */
 }
 

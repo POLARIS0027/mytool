@@ -44,11 +44,11 @@ const Report = () => {
     return (
         <div className="Report">
             <header className="Report-header">
-                <Link to="/" className="report-button">메인 페이지로 돌아가기</Link>
+                <Link to="/" className="report-button">作業一覧に戻る</Link>
                 <h1>Report</h1>
             </header>
             <div className="task-list-table">
-                <h2>완료한 일</h2>
+                <h2>完了したタスク</h2>
                 <table>
                     <thead>
                         <tr>
@@ -63,7 +63,7 @@ const Report = () => {
                     </tbody>
                 </table>
 
-                <h2>대기중인 일</h2>
+                <h2>条件待ちのタスク</h2>
                 <table>
                     <thead>
                         <tr>
@@ -78,7 +78,7 @@ const Report = () => {
                     </tbody>
                 </table>
 
-                <h2>블록된 일</h2>
+                <h2>Blockedタスク</h2>
                 <table>
                     <thead>
                         <tr>
@@ -93,7 +93,7 @@ const Report = () => {
                     </tbody>
                 </table>
 
-                <h2>진행중인 일</h2>
+                <h2>進行中のタスク</h2>
                 <table>
                     <thead>
                         <tr>
@@ -108,7 +108,7 @@ const Report = () => {
                     </tbody>
                 </table>
 
-                <h2>미착수</h2>
+                <h2>未着集のタスク</h2>
                 <table>
                     <thead>
                         <tr>

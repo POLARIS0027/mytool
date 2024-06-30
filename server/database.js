@@ -9,12 +9,13 @@ db.serialize(() => {
         goal TEXT NOT NULL,
         status TEXT NOT NULL,
         next_action TEXT NOT NULL,
-        deadline TEXT
+        deadline TEXT,
+        folder TEXT DEFAULT 'INBOX' -- 폴더 컬럼 추가
     )`);
 
     // 예시 데이터 삽입 (옵션)
-    db.run("INSERT INTO tasks (created_at, goal, status, next_action, deadline) VALUES (?, ?, ?, ?, ?)",
-        ["2024-06-30-15:30", "First task goal", "ToDo", "Next action for first task", "2024-07-10"]);
+    db.run("INSERT INTO tasks (created_at, goal, status, next_action, deadline, folder) VALUES (?, ?, ?, ?, ?, ?)",
+        ["2024-06-30-15:30", "First task goal", "ToDo", "Next action for first task", "2024-07-10", "INBOX"]);
 });
 
 module.exports = db;

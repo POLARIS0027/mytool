@@ -86,12 +86,12 @@
 .task-card {
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin: 0px 0;
-  padding: 4px;
+  margin: 1px 0;
+  padding: 0px;
   background-color: #3a3a3a;
   color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 280px;
+  width: 300px;
   /* Adjust width as needed */
   word-wrap: break-word;
   overflow: hidden;
@@ -100,33 +100,44 @@
 }
 
 .task-card-content {
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+  /* 패딩을 0으로 설정 */
+  margin: 0;
+  /* 마진을 0으로 설정 */
   font-size: 1em;
-  /* Adjust font size */
 }
 
+
 .task-table {
-  width: 100%;
+  width: 98%;
   border-collapse: collapse;
   font-size: 1em;
-  /* Adjust font size */
+  margin: 4px;
+  /* 테이블의 마진을 0으로 설정 */
+  padding: 4px;
+  /* 테이블의 패딩을 0으로 설정 */
 }
 
 .task-cell {
-  padding: 5px;
+  padding: 2px;
+  /* 셀 패딩을 줄임 */
   border: 1px solid #ddd;
-  word-break: break-word;
-  /* Add this line to break long words */
-  font-size: 1em;
-  /* Adjust font size */
+  text-align: center;
+  /* 가운데 정렬 */
+  vertical-align: middle;
+  width: 33.33%;
+  /* 각 셀의 너비를 33.33%로 설정 */
+}
+
+.task-cell input[type="date"] {
+  width: 50%;
 }
 
 .task-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   flex-wrap: wrap;
   font-size: 1em;
   /* Adjust font size */

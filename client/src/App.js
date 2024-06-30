@@ -17,8 +17,6 @@ const getStatusStyle = (status) => {
   switch (status) {
     case 'Waiting':
       return { backgroundColor: '#f3aa51', color: '#000' };
-    // case 'ToDo':
-    //   return { backgroundColor: '#fcf695', color: '#000' };
     case 'Blocked':
       return { backgroundColor: '#db706c', color: '#fff' };
     case 'WIP':
@@ -218,7 +216,9 @@ function App() {
   };
 
   const moveTaskToFolder = (taskId, folderName) => {
-    setTasks(tasks.map(task => task.id === taskId ? { ...task, folder: folderName } : task));
+    const updatedTask = tasks.find(task => task.id === taskId);
+    updatedTask.folder = folderName;
+    handleEditTask(updatedTask);
   };
 
   const folders = ['INBOX', 'PC', 'backroom', 'KWMR', 'OJT', 'OKD', 'short'];
@@ -227,7 +227,7 @@ function App() {
     <DndProvider backend={HTML5Backend}>
       <div className="App">
         <header className="App-header">
-          <Link to="/report" className="report-button">보고 화면으로 가기</Link> {/* 버튼 추가 */}
+          <Link to="/report" className="report-button">보고 화면으로 가기</Link>
           <h1>Tasks</h1>
           <form onSubmit={handleAddTask} className="task-form">
             <input

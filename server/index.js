@@ -1,4 +1,3 @@
-// server/index.js
 const express = require('express');
 const app = express();
 const db = require('./database'); // 데이터베이스 파일을 가져옴
@@ -22,9 +21,9 @@ app.get('/api/tasks', (req, res) => {
 
 // 새로운 태스크 추가하기
 app.post('/api/tasks', (req, res) => {
-    const { created_at, goal, status, next_action, deadline } = req.body;
-    db.run("INSERT INTO tasks (created_at, goal, status, next_action, deadline) VALUES (?, ?, ?, ?, ?)",
-        [created_at, goal, status, next_action, deadline], function (err) {
+    const { created_at, goal, status, next_action, deadline, folder } = req.body;
+    db.run("INSERT INTO tasks (created_at, goal, status, next_action, deadline, folder) VALUES (?, ?, ?, ?, ?, ?)",
+        [created_at, goal, status, next_action, deadline, folder], function (err) {
             if (err) {
                 return console.log(err.message);
             }
@@ -35,9 +34,9 @@ app.post('/api/tasks', (req, res) => {
 // 태스크 업데이트하기
 app.put('/api/tasks/:taskId', (req, res) => {
     const taskId = req.params.taskId;
-    const { created_at, goal, status, next_action, deadline } = req.body;
-    db.run("UPDATE tasks SET created_at = ?, goal = ?, status = ?, next_action = ?, deadline = ? WHERE id = ?",
-        [created_at, goal, status, next_action, deadline, taskId], function (err) {
+    const { created_at, goal, status, next_action, deadline, folder } = req.body;
+    db.run("UPDATE tasks SET created_at = ?, goal = ?, status = ?, next_action = ?, deadline = ?, folder = ? WHERE id = ?",
+        [created_at, goal, status, next_action, deadline, folder, taskId], function (err) {
             if (err) {
                 return console.log(err.message);
             }
